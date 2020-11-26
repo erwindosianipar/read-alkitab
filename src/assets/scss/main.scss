@@ -1,0 +1,17 @@
+/**
+ * main style scss
+ *
+ */
+
+@charset "utf-8";
+
+@import '~bulma/sass/utilities/initial-variables';
+@import '~bulma/sass/utilities/functions';
+
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+$family-serif: 'Nunito Sans', sans-serif;
+$family-primary: $family-serif;
+
+@import '~bulma';
