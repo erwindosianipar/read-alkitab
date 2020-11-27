@@ -1,6 +1,6 @@
 import { register } from 'register-service-worker'
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.VUE_APP_ENV === 'production') {
   register('/service-worker.js', {
     ready() {
       console.log('Service worker is active.')
