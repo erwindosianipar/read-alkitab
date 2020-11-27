@@ -2,7 +2,7 @@ name: Workflows Build Application
 
 on:
   push:
-    branches: [ master, develop-* ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -18,13 +18,13 @@ jobs:
         uses: actions/setup-node@master
 
       - name: NPM Installation
-        uses: npm install
+        run: npm install
 
       - name: NPM Run Application
-        uses: npm run serve
+        run: npm run serve
 
       - name: NPM Run Build
-        uses: npm run build
+        run: npm run build
 
       - name: Serve Main Application
-        uses: npm start
+        run: npm start
