@@ -20,11 +20,5 @@ jobs:
       - name: NPM Installation
         run: npm install
 
-      - name: NPM Run Application
-        run: npm run serve
-
       - name: NPM Run Build
         run: npm run build
-
-      - name: Serve Main Application
-        run: npm start
