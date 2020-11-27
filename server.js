@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const history = require('connect-history-api-fallback')
+require('dotenv').config()
 
 const app = express()
 
@@ -25,7 +26,7 @@ app.get('/', function(req, res) {
   res.render(path.join(__dirname + '/dist/index.html'))
 })
 
-var server = app.listen(process.env.PORT || 5000, function () {
+var server = app.listen(process.env.VUE_APP_PORT || 5000, function () {
   var port = server.address().port
-  console.log("App now running on port", port)
+  console.log('Starting application at port:', port)
 })

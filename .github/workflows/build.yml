@@ -1,0 +1,30 @@
+name: Workflows Build Application
+
+on:
+  push:
+    branches: [ master, develop-* ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Setup Node
+        uses: actions/setup-node@master
+
+      - name: NPM Installation
+        uses: npm install
+
+      - name: NPM Run Application
+        uses: npm run serve
+
+      - name: NPM Run Build
+        uses: npm run build
+
+      - name: Serve Main Application
+        uses: npm start

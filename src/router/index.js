@@ -10,13 +10,15 @@ import Faq from '../pages/faq/Faq.vue'
 
 Vue.use(VueRouter)
 
+var appTitle = process.env.VUE_APP_TITLE
+
 const routes = [
   {
     path: '*',
     name: 'Not Found',
     component: NotFound,
     meta: {
-      title: 'Not Found | Read Alkitab Indonesia'
+      title: 'Not Found | ' + appTitle
     }
   },
   {
@@ -24,7 +26,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: 'Home | Read Alkitab Indonesia'
+      title: 'Home | ' + appTitle
     }
   },
   {
@@ -32,7 +34,7 @@ const routes = [
     name: 'Read',
     component: Read,
     meta: {
-      title: 'Read | Read Alkitab Indonesia'
+      title: 'Read | ' + appTitle
     }
   },
   {
@@ -40,7 +42,7 @@ const routes = [
     name: 'Product',
     component: Product,
     meta: {
-      title: 'Product | Read Alkitab Indonesia'
+      title: 'Product | ' + appTitle
     }
   },
   {
@@ -48,7 +50,7 @@ const routes = [
     name: 'About',
     component: About,
     meta: {
-      title: 'About | Read Alkitab Indonesia'
+      title: 'About | ' + appTitle
     }
   },
   {
@@ -56,7 +58,7 @@ const routes = [
     name: 'FAQ',
     component: Faq,
     meta: {
-      title: 'FAQ | Read Alkitab Indonesia'
+      title: 'FAQ | ' + appTitle
     }
   }
 ]
