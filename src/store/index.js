@@ -6,24 +6,24 @@ import APIService from '../network/api.service'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    passageList: [],
-    loading: false
-  },
-  mutations: {
-    setPassageList(state, data) {
-      state.passageList = data
+    state: {
+        passageList: [],
+        loading: false
     },
-    toogleLoading(state, value) {
-      state.loading = value
+    mutations: {
+        setPassageList(state, data) {
+            state.passageList = data
+        },
+        toogleLoading(state, value) {
+            state.loading = value
+        }
+    },
+    actions: {
+        getPassageList(context) {
+            context.commit('toogleLoading', true)
+            return APIService.getPassageList()
+        }
+    },
+    modules: {
     }
-  },
-  actions: {
-    getPassageList(context) {
-      context.commit('toogleLoading', true)
-      return APIService.getPassageList()
-    }
-  },
-  modules: {
-  }
 })
