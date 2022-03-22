@@ -7,6 +7,10 @@
         "build": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
         "start": "node server.js"
     },
+    "engines": {
+        "npm": "8.5.4",
+        "node": "7.5.0"
+    },
     "dependencies": {
         "axios": "^0.21.2",
         "bulma": "^0.9.1",

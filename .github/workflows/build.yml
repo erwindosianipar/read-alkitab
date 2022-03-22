@@ -10,15 +10,20 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [17.5.0]
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      
+
       - name: Setup Node
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
 
       - name: NPM Installation
         run: npm install
 
       - name: NPM Run Build
-        run: npm run build
+        run: npm run build --if-present
